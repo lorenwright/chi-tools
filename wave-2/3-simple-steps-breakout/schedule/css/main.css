@@ -1,0 +1,161 @@
+/*****************************************/
+/*          General Styles               */
+/*****************************************/
+
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "myriad-pro", sans-serif;
+    /*font-family: Helvetica, Arial, sans-serif;*/
+    font-weight: 300;
+    background: #E9A260;
+}
+
+/*****************************************/
+/*          Page Sections                */
+/*****************************************/
+.wrapper {
+    width: 100vw;
+    height: 100vh;
+    /*overflow: hidden;*/
+    overflow: auto;
+}
+
+.container {
+    max-width: 491px;
+    margin: auto;
+    padding: 0 65px 0 36px;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.section {
+    padding: 50px 0 12px;
+}
+
+.section-number {
+    font-weight: 600;
+    color: #fff;
+    font-size: 38px;
+    text-align: center;
+}
+
+p {
+    font-size: 18px;
+    color: #fff;
+    clear: both;
+    margin: 20px 0 0;
+}
+
+.section p:first-of-type {
+    padding-top: 24px;
+}
+
+strong {
+    font-weight: 600;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+ul li {
+    color: #fff;
+    font-size: 18px;
+    padding: 5px 0;
+}
+
+/*ul li::before {
+    content: '';
+    height: 5px;
+    width: 5px;
+    background: #fff;
+    border-radius: 50%;
+    margin-right: 15px;
+    display: inline-block;
+    transform: translateY(-2px);
+}*/
+
+em {
+    font-size: 14px;
+    line-height: 16px;
+}
+
+h2 {
+    font-size: 36px;
+    line-height: 38px;
+    color: #fff;
+    font-weight: 200;
+    margin-top: 0;
+    letter-spacing: -1px;
+    position: relative;
+    text-align: center;
+    display: inline;
+}
+
+h2::after {
+    height: 2px;
+    background: #fff;
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: -24px;
+}
+
+.cta-link {
+    font-size: 13px;
+    color: #fff;
+    text-decoration: none;
+    font-style: italic;
+    font-weight: 500;
+    line-height: 55px;
+}
+
+.left-text {
+    text-align: left;
+}
+
+.left-text::after {
+    width: calc(100% + 35px);
+    left: -35px;
+}
+
+.right-text {
+    text-align: right;
+}
+
+.right-text::after {
+    width: calc(100% + 65px);
+    right: -65px;
+}
+
+/*****************************************/
+/*          Section 3                    */
+/*****************************************/
+#section3 {
+    background: #E9A260;
+    padding-top: 40px;
+}
+
+#section3 h2::after {
+    background: #436BA0;
+}
+
+#section3 img {
+    width: 345px;
+    left: 25px;
+    top: calc(100% + 20px);
+}
+
+
+/*****************************************/
+/*          Mobile                       */
+/*****************************************/
+
+@media (max-width: 455px) {
+    h2 {
+        font-size: 32px;
+        line-height: 34px;
+    }
+}

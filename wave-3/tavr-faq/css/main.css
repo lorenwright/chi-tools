@@ -1,0 +1,143 @@
+/*****************************************/
+/*          General Styles               */
+/*****************************************/
+
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "myriad-pro", sans-serif;
+    font-weight: 300;
+    background: #00A5B7;
+}
+
+strong {
+    font-weight: 600;
+}
+.wrapper {
+    width: 100vw;
+    height: 100vh;
+    /*overflow: hidden;*/
+    overflow: auto;
+}
+.container {
+    max-width: 804px;
+    margin: auto;
+    padding: 60px 0 126px 0;
+    position: relative;
+    box-sizing: border-box;
+}
+
+h1 {
+    margin-top: 0;
+    margin-bottom: 16px;
+    color: #fff;
+    font-size: 44px;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+header p {
+    color: #fff;
+    font-size: 25px;
+    line-height: 33px;
+    letter-spacing: 1px;
+    width: 91%;
+    margin-top: 0;
+}
+
+header img {
+    max-width: 100%;
+    margin-top: 4px;
+}
+
+h2 {
+    font-size: 36px;
+    color: #fff;
+    font-weight: 300;
+    margin-top: 19px;
+    margin-bottom: 24px;
+}
+
+/*****************************************/
+/*          Accordion                    */
+/*****************************************/
+
+.accordion-section {
+    margin: 4px 0;
+}
+
+.accordion-header {
+    color: #fff;
+    background: #FFB532;
+    font-size: 25px;
+    letter-spacing: 1px;
+    padding: 5px 12px 4px;
+    cursor: pointer;
+}
+
+.accordion-header::before {
+    content: '+';
+    color: #00a5b9;
+    font-weight: 600;
+    margin-right: 10px;
+    width: 16px;
+    display: inline-block;
+}
+
+.accordion-header.opened::before {
+    content: '–';
+    color: #00a5b9;
+    font-weight: 600;
+}
+
+.accordion-copy {
+    display: none;
+    padding: 2px 12px 4px;
+}
+
+.accordion-copy p {
+    color: #fff;
+    font-size: 18px;
+}
+
+.accordion-copy ul {
+    list-style-type: none;
+}
+
+.accordion-copy li {
+    color: #fff;
+    margin: 10px 0;
+}
+
+/*****************************************/
+/*          Mobile                       */
+/*****************************************/
+
+@media (max-width: 804px) {
+    .container {
+        margin-left: 15px;
+        margin-right: 15px;
+        padding-top: 40px;
+    }
+
+    .accordion-header {
+        font-size: 22px;
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+
+    header p {
+        font-size: 18px;
+        line-height: 22px;
+        width: 100%;
+    }
+}
+
+@media (max-width: 700px) {
+    .accordion-header {
+        font-size: 18px;
+    }
+}

@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Are you at risk for lung cancer?</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="fonts/font-awesome-4.6.3/css/font-awesome.min.css">
+        <script src="https://use.typekit.net/jnd5ogo.js"></script>
+        <script>try{Typekit.load({ async: true });}catch(e){}</script>
+    </head>
+    <body>
+
+        <div class="initial-screen">
+            <div class="header">
+                <h1 class="container">are you at risk for lung cancer? find out</h1>
+            </div>
+
+                <form class="calculator container">
+                    <p>On average, how many cigarettes do you/did you smoke per day? (enter number)</p>
+                    <input type="number" min="1" max="99" id="numberOfCigs" pattern="[0-9]*" inputmode="numeric" required />
+                    <p id="how-many-years">How many years have you smoked? (pull slider)</p>
+                    <div class="slider">
+                        <input type="range" min="10" max="60" value="10" id="numberOfYears" />
+                        <span id="numberOfYearsVal">35</span>
+                        <ul class="year-ticks">
+                            <li id="tick-10"></li>
+                            <li id="tick-15"></li>
+                            <li id="tick-20"></li>
+                            <li id="tick-25"></li>
+                            <li id="tick-30"></li>
+                            <li id="tick-35"></li>
+                            <li id="tick-40"></li>
+                            <li id="tick-45"></li>
+                            <li id="tick-50"></li>
+                            <li id="tick-55"></li>
+                            <li id="tick-60"></li>
+                        </ul>
+                        <ul class="numbers-below-slider">
+                            <li>10</li>
+                            <li>20</li>
+                            <li>30</li>
+                            <li>40</li>
+                            <li>50</li>
+                            <li>60</li>
+                        </ul>
+                    </div>
+
+                    <input type="submit" class="nextBtn" value="next &raquo;"  />
+                </form>
+        </div>
+
+        <div class="results-screen">
+            <div class="results-body container">
+                <img src="images/cigarette.svg" />
+                <h2>You’ve smoked <span id="result"></span> pack-year<span class="plural">s</span>.</h2>
+                <p>Here’s what that means.</p>
+                <p>Pack-years are a way to estimate a smoker’s tobacco exposure over a lifetime. A pack-year is the equivalent of smoking 20 cigarettes per day for a year. So if you smoked a pack a day for 30 years, that equals 30 pack-years of smoking. Smoking 2 packs a day for 20 years equals 40 pack-years, and so on.</p>
+                <p>This measurement is used by doctors to help determine if a person is at risk of developing lung cancer. Other factors aside, people with at least a 30 pack-year history of smoking and who are between the ages of 55 and 80 are at high risk. This makes them candidates for lung cancer screening.</p>
+                <a href="#" class="cta-link">learn more &raquo;</a>
+            </div>
+        </div>
+
+
+        <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>

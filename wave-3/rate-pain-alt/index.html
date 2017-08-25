@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Rate your joint pain</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="fonts/font-awesome-4.6.3/css/font-awesome.min.css">
+        <script src="https://use.typekit.net/jnd5ogo.js"></script>
+        <script>try{Typekit.load({ async: true });}catch(e){}</script>
+    </head>
+    <body>
+
+        <div class="header container">
+            <h1>Rate your joint pain</h1>
+            <p>If you’re bothered by joint pain, it’s smart to get it diagnosed and treated before it gets worse. Sometimes, patients are asked to rate their pain on a scale of 1 to 10. How does yours rate?</p>
+        </div>
+
+        <div class="slider container">
+            <ul class="above-slider">
+                <li class="pain pain-0"><span>no hurt</span><img src="images/no-hurt.svg" class="painImg" /></li>
+                <li></li>
+                <li class="pain pain-2"><span>hurts little bit</span><img src="images/little-bit.svg" class="painImg" /></li>
+                <li></li>
+                <li class="pain pain-4"><span>hurts little more</span><img src="images/little-more.svg" class="painImg" /></li>
+                <li></li>
+                <li class="pain pain-6"><span>hurts even more</span><img src="images/even-more.svg" class="painImg" /></li>
+                <li></li>
+                <li class="pain pain-8"><span>hurts whole lot</span><img src="images/whole-lot.svg" class="painImg" /></li>
+                <li></li>
+                <li class="pain pain-10"><span>hurts worst</span><img src="images/hurts-worst.svg" class="painImg" /></li>
+            </ul>
+            <ul class="number-above number-slider">
+                <li></li>
+                <li class="number">1</li>
+                <li></li>
+                <li class="number">3</li>
+                <li></li>
+                <li class="number">5</li>
+                <li></li>
+                <li class="number">7</li>
+                <li></li>
+                <li class="number">9</li>
+                <li></li>
+            </ul>
+            <ul class="top-ticks ticks">
+                <li></li>
+                <li id="tick-1" class="tick"></li>
+                <li></li>
+                <li id="tick-3" class="tick"></li>
+                <li></li>
+                <li id="tick-5" class="tick"></li>
+                <li></li>
+                <li id="tick-7" class="tick"></li>
+                <li></li>
+                <li id="tick-9" class="tick"></li>
+                <li></li>
+            </ul>
+            <input type="range" min="0" max="10" value="0" step="0.1" />
+
+            <ul class="bottom-ticks ticks">
+                <li id="tick-0" class="tick"></li>
+                <li></li>
+                <li id="tick-2" class="tick"></li>
+                <li></li>
+                <li id="tick-4" class="tick"></li>
+                <li></li>
+                <li id="tick-6" class="tick"></li>
+                <li></li>
+                <li id="tick-8" class="tick"></li>
+                <li></li>
+                <li id="tick-10" class="tick"></li>
+            </ul>
+            <ul class="numbers-below number-slider">
+                <li>0</li>
+                <li></li>
+                <li>2</li>
+                <li></li>
+                <li>4</li>
+                <li></li>
+                <li>6</li>
+                <li></li>
+                <li>8</li>
+                <li></li>
+                <li>10</li>
+            </ul>
+        </div>
+
+        <div class="footer container">
+            <span class="copyright">Used with permission. Copyright Mosby.</span>
+            <a href="#0" class="ctaBtn" target="_blank">schedule an appointment &raquo;</a>
+        </div>
+
+
+        <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>

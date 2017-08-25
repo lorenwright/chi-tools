@@ -1,0 +1,308 @@
+/*****************************************/
+/*          General Styles               */
+/*****************************************/
+
+body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+    font-family: "myriad-pro", sans-serif;
+    /*font-family: Helvetica, Arial, sans-serif;*/
+    font-weight: 300;
+    background: #476EA1;
+}
+.wrapper {
+    width: 100vw;
+    height: 100vh;
+    /*overflow: hidden;*/
+    overflow: auto;
+}
+.container {
+    max-width:491px;
+    padding: 0 22px;
+    margin: auto;
+    position: relative;
+    box-sizing:border-box;
+}
+
+h1 {
+    color: #fff;
+    font-size: 30px;
+    font-weight: 200;
+}
+
+
+/*****************************************/
+/*          Left Half                    */
+/*****************************************/
+
+.left {
+    float: left;
+    width: 44%;
+    box-sizing: border-box;
+}
+
+.left p {
+    font-size: 14px;
+    color: #fff;
+    line-height: 16px;
+    margin-top: 0;
+}
+
+.footer-cta a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: normal;
+    font-size: 14px;
+    display: block;
+}
+
+.footer-cta a::before {
+    content:'';
+    background: url('../images/schedule-checkup.svg') 22px 22px;
+    background-size: cover;
+    height: 22px;
+    width: 22px;
+    display: inline-block;
+    margin-right: 6px;
+    transform: translateY(6px);
+}
+
+h2 {
+    font-weight: bold;
+    color: #fff;
+    margin: 0;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.color-text {
+    display: none;
+}
+
+/*****************************************/
+/*          Right Half                    */
+/*****************************************/
+
+.right {
+    float: right;
+    width: 53%;
+    position: relative;
+}
+
+
+/* WHEEL */
+.wheel {
+    position: relative;
+    width: 236px;
+    height: 225px;
+}
+
+/* ARROW */
+.wheel .arrow {
+    position: absolute;
+    width: 6.5%;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.wheel .arrow img {
+    width: 100%;
+}
+
+/* CIRCLE CONTAINER */
+.wheel .circle {
+    position: absolute;
+    width: 94%;
+    height: 100%;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* CIRCLE ELEMENTS THAT WILL ROTATE */
+
+.wheel .circle .circle-rotate {
+    width: 100%;
+    height: 0;
+    padding-bottom: 100%;
+    transition: transform 1s ease;
+}
+
+.wheel .circle .circle-rotate .circle-image {
+    width: 100%;
+}
+
+/* NOSE AND NOSE BG */
+.wheel .circle .nose {
+    position: absolute;
+    width: 40%;
+    height: 40%;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    background: #FFB731;
+    border: 2px solid #fff;
+    border-radius: 50%;
+}
+
+.wheel .circle .nose img {
+    width: 70%;
+    height: auto;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+
+.nose-img-mobile {
+    display: none;
+}
+.nose-img-desktop {
+    display: block;
+}
+
+/* SNOT */
+.black {
+    position: absolute;
+    width: auto;
+    top: 34%;
+    left: 5%;
+    cursor: pointer;
+}
+
+.brown {
+    position: absolute;
+    width: auto;
+    top: 8%;
+    left: 25%;
+    cursor: pointer;
+}
+
+.white {
+    position: absolute;
+    width: auto;
+    top: 23%;
+    left: 66%;
+    cursor: pointer;
+}
+
+.red {
+    position: absolute;
+    width: auto;
+    top: 62%;
+    left: 70%;
+    cursor: pointer;
+}
+
+.green {
+    position: absolute;
+    width: auto;
+    top: 73%;
+    left: 27.5%;
+    cursor: pointer;
+}
+
+/* LARGE SNOT */
+
+.black.largeSnot {
+    position: absolute;
+    width: auto;
+    top: 29%;
+    left: -14%;
+}
+
+.brown.largeSnot {
+    position: absolute;
+    width: auto;
+    top: -11%;
+    left: 19%;
+    transform: rotate(-288deg);
+}
+
+.white.largeSnot {
+    position: absolute;
+    width: auto;
+    top: -12%;
+    left: 54%;
+    transform: rotate(-216deg);
+}
+
+.red.largeSnot {
+    position: absolute;
+    width: auto;
+    top: 54%;
+    left: 64%;
+    transform: rotate(-144deg);
+}
+
+.green.largeSnot {
+    position: absolute;
+    width: auto;
+    top: 59%;
+    left: 8%;
+    transform: rotate(-72deg);
+}
+
+
+/*****************************************/
+/*          Animation                    */
+/*****************************************/
+.transformZero {
+    transform: rotate(0deg);
+}
+.transformOne {
+    transform: rotate(72deg);
+}
+.transformTwo {
+    transform: rotate(144deg);
+}
+.transformThree {
+    transform: rotate(216deg);
+}
+.transformFour {
+    transform: rotate(288deg);
+}
+
+/*****************************************/
+/*          Mobile                       */
+/*****************************************/
+
+@media (max-width: 460px) {
+    .left {
+        width: 100%;
+        clear: both;
+        float: none;
+        margin-top: 60px;
+    }
+    .right {
+        width: 100%;
+        clear: both;
+        float: none;
+    }
+    .wheel {
+        margin: auto;
+    }
+    .wheel .arrow {
+        transform: rotate(-90deg) translate(50%, -35%);
+        top: 100%;
+        left: 50%;
+    }
+
+    .wheel .circle {
+        transform: rotate(-90deg) translate(50%, -50%);
+        left: 50%;
+    }
+
+    .wheel .circle .nose img {
+        /*transform: rotate(90deg) translate(-50%, 50%);*/
+    }
+    .nose-img-mobile {
+        display: block;
+    }
+    .nose-img-desktop {
+        display: none;
+    }
+}

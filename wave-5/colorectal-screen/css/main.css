@@ -1,0 +1,310 @@
+/*****************************************/
+/*          General Styles               */
+/*****************************************/
+
+body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+    font-family: "myriad-pro", sans-serif;
+    /*font-family: Helvetica, Arial, sans-serif;*/
+    font-weight: 300;
+    background: #00a5b9;
+    color: #fff;
+}
+
+.wrapper {
+    max-width: 877px;
+    margin: auto;
+    /*overflow: hidden;*/
+    position: relative;
+    box-sizing: border-box;
+}
+
+svg,
+img {
+    vertical-align: middle;
+}
+
+/*****************************************/
+/*          Header Styles                */
+/*****************************************/
+
+.header {
+    width: 100%;
+    position: relative;
+    padding: 0;
+    overflow: hidden;
+}
+
+.colon-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.header .container {
+    width: 65%;
+    padding-left: 55px;
+}
+
+.header h1 {
+    font-weight: 300;
+    font-size: 44px;
+    padding-top: 20px;
+    margin-bottom: 0;
+}
+
+.header p {
+    font-size: 24px;
+    line-height: 30px;
+    margin-bottom: 0;
+    margin-top: 10px;
+}
+
+/*****************************************/
+/*          Middle Colon styles          */
+/*****************************************/
+
+.colon-middle-section {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+    margin: 0;
+}
+.colon-middle-image {
+    width: 100%;
+}
+
+h2 {
+    position: absolute;
+    top: 30%;
+    display: block;
+    font-weight: 300;
+    font-size: 29px;
+    letter-spacing: 1px;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    width: 55%;
+    cursor: pointer;
+}
+
+h2::before {
+    content: '';
+    display: inline-block;
+    width: 27px;
+    height: 27px;
+    background-repeat: no-repeat;
+    margin-right: 15px;
+    transform: translateY(4px);
+    -moz-transform: translateY(4px);
+    -webkit-transform: translateY(4px);
+}
+
+.closed h2::before {
+    background: url('../images/plus.svg') center center;
+    background-repeat: no-repeat;
+}
+
+.opened h2::before {
+    background: url('../images/minus.svg') center center;
+    background-repeat: no-repeat;
+}
+
+.modal {
+    position: absolute;
+    z-index: 999;
+    background: #00a5b9;
+    width: 44%;
+    border: 4px solid #fff;
+    border-radius: 0 52px 52px 52px;
+    padding: 5px 25px;
+    top: 85%;
+    left: 50%;
+    display: none;
+}
+
+.modal p {
+    font-size: 20px;
+    line-height: 22px;
+}
+
+.opened .modal {
+    display: block;
+}
+
+#colonoscopy {
+    top: 50%;
+    left: 43%;
+}
+
+#sigmoidoscopy {
+    left: 27%;
+}
+
+#enema {
+    left: 36%;
+}
+
+#colonography {
+    left: 27%;
+}
+
+#stool {
+    left: 43%;
+}
+
+#guaiac {
+    left: calc(27% + 40px);
+    text-indent: -40px;
+}
+
+#colon-middle-section-1 .modal {
+    left: calc(43% + 40px);
+}
+
+#colon-middle-section-2 .modal {
+    left: calc(27% + 40px);
+}
+
+#colon-middle-section-3 .modal {
+    left: calc(36% + 40px);
+}
+
+#colon-middle-section-4 .modal {
+    left: calc(27% + 40px);
+}
+
+#colon-middle-section-5 .modal {
+    left: calc(43% + 40px);
+}
+
+#colon-middle-section-6 .modal {
+    left: calc(27% + 40px);
+}
+
+/*****************************************/
+/*          Footer styles                */
+/*****************************************/
+
+.footer {
+    position: absolute;
+    width: 58%;
+    bottom: 55px;
+    right: 0;
+    padding-right: 75px;
+}
+
+.footer a {
+    text-align: right;
+    display: block;
+    width: 100%;
+    font-weight: 500;
+    font-size: 18px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer p {
+    font-size: 12px;
+    line-height: 14px;
+    text-align: right;
+}
+
+/*****************************************/
+/*          Mobile styles                */
+/*****************************************/
+
+@media (max-width: 768px) {
+
+    .header {
+        padding-top: 40px;
+        padding-bottom: 50px;
+    }
+
+    .header h1 {
+        font-size: 18px;
+    }
+
+    .header p {
+        font-size: 14px;
+        line-height: 15px;
+    }
+
+    .colon-middle-section svg {
+        transform: scale(50%);
+        -webkit-transform: scale(50%);
+        -moz-transform: scale(50%);
+    }
+
+    h2 {
+        font-size: 14px;
+        left: 55% !important;
+        text-align: center;
+        transform: translate(-50%, -50%);
+    }
+
+    h2::before {
+        width: 16px;
+        height: 16px;
+        background-size: 100%;
+    }
+
+    #guaiac {
+        text-indent: 0;
+    }
+
+    .modal {
+        left: 50% !important;
+        top: 98%;
+        width: 60%;
+        transform: translateX(-50%);
+        -moz-transform: translateX(-50%);
+        -webkit-transform: translateX(-50%);
+    }
+
+    .modal p {
+        font-size: 14px;
+        line-height: 16px;
+    }
+
+    #colon-middle-section-last .colon-middle-image {
+        z-index: 2;
+    }
+
+    .footer {
+        position: relative;
+        width: 100%;
+        bottom: 0;
+        margin-top: -4px;
+        padding: 30px;
+        box-sizing: border-box;
+        background: #FBB315;
+        border-top: 4px solid #fff;
+        z-index: -1;
+    }
+
+    .footer a {
+        text-align: left;
+    }
+
+    .footer p {
+        text-align: left;
+    }
+}
+
+@media (max-width: 450px) {
+    h2 {
+        font-size: 10px;
+        line-height: 11px;
+    }
+
+    h2::before {
+        width: 12px;
+        height: 12px;
+    }
+}

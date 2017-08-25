@@ -1,0 +1,240 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Heat or Ice</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="lib/jquery-ui.min.css">
+        <link rel="stylesheet" href="css/main.css">
+        <script src="https://use.typekit.net/jnd5ogo.js"></script>
+        <script>try{Typekit.load({ async: true });}catch(e){}</script>
+    </head>
+    <body>
+
+        <div class="container">
+
+            <header class="header">
+              <h1>HEAT or ICE</h1>
+              <p class="subheading">Therapeutic icing and heating can help ease joint pain. But when to do what?</p>
+              <p id="question" class="question"></p>
+            </header>
+
+            <section class="body">
+              <div id="quizArea" class="clearfix">
+
+                <div id="dude" class="ui-widget-content">
+                  <img src="images/dude.svg" onerror="this.onerror=null;this.src='images/dude.png';" />
+                </div>
+
+                <div id="hot" class="answer__container orange clearfix fullHeight">
+                  <div class="frame frameAnswer"></div>
+                  <div id="hotFrame0" class="frame"></div>
+                  <div id="hotAnswer" class="frame frameMan"></div>
+                  <div id="hotFrame1" class="frame hot-center"></div>
+
+                  <div id="hotFrame2" class="frame hot-splash"></div>
+                  <div id="hotFrame3" class="frame hot-splash"></div>
+                  <div id="hotFrame4" class="frame hot-splash"></div>
+
+                  <div id="hotReveal" class="frame hot-reveal"><span></span><span></span></div>
+                  <div id="hotFrame5" class="frame hot-frame"></div>
+                  <p class="description"></p>
+                </div>
+
+                <div class="separator clearfix fullHeight">
+                </div>
+
+                <div id="cold" class="answer__container blue clearfix fullHeight">
+                  <div class="frame frameAnswer"></div>
+                  <div id="coldFrame0" class="frame"></div>
+                  <div id="coldAnswer" class="frame frameMan"></div>
+                  <div id="coldFrame1" class="frame cold-frame"></div>
+                  <div id="coldFrame2" class="frame"></div>
+                  <div id="coldFrame3" class="frame cold-frame-alt"></div>
+                  <div id="coldFrame4" class="frame"></div>
+                  <div id="coldFrame5" class="frame cold-frame"></div>
+                  <div id="coldFrame6" class="frame"></div>
+                  <div id="coldFrame7" class="frame frame--splash"></div>
+                  <div id="coldFrame8" class="frame cold-frame-alt frame--splash"></div>
+                  <div id="coldFrame9" class="frame frame--splash"></div>
+                  <p class="description"></p>
+                </div>
+              </div>
+
+            </section>
+
+            <footer class="footer">
+              <div class="footer--links">
+                <a id="start" href="#question1" class="quiz-next active">take the quiz »</a>
+                <a id="next" href="#next" class="quiz-next">next »</a>
+                <a id="last" href="#externalLink" class="quiz-next">learn more »</a>
+              </div>
+              <p class="footer--caption">(<span class="desktop">drag and drop the person into</span><span class="mobile">tap</span> the tub of heat or ice)</p>
+            </footer>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script src="lib/modernizr.min.js"></script>
+    </body>
+
+<script>
+
+
+function dragOn() {
+  if($(window).width() > 768)
+    $( "#dude" ).draggable({containment: "#quizArea", scroll: false, revert: "valid"});
+};
+
+$( "#hot, #cold" ).droppable({
+  drop: function( event, ui ) {
+    var el = $(this);
+    checkAnswer(el, i);
+  }
+});
+
+
+$('.quiz-next').on('click', function(e) {
+  e.preventDefault();
+
+  $(this).removeClass('active').hide();
+
+  if($(this).attr('id') == 'start') {
+
+    i = 0;
+
+    $('h1').addClass('shrink');
+
+    $('#question').text(question1[0]);
+
+    $('.subheading').fadeOut(300, function() {
+      $('#question').fadeIn(300);
+      // turn on the question
+      $('#quizArea').addClass('live');
+      dragOn();
+    });
+  } else if ($(this).attr('id') == 'next') {
+
+    i++;
+
+    resetQuestion();
+
+
+    $('#question').fadeOut(300, function() {
+      $('#question').text(questions[i][0]).fadeIn(300);
+      $('#quizArea').addClass('live');
+      dragOn();
+    });
+  } else {
+    resetQuestion();
+  }
+
+  setTimeout(function() {
+    $('.footer--caption').fadeIn(300);
+  }, 1000);
+});
+
+$('.answer__container').on('click', function() {
+  if($('#quizArea').hasClass('live') && $(window).width() <= 768)
+    checkAnswer(this, i);
+});
+
+
+function dragOn() {
+  $( "#dude" ).draggable({containment: "#quizArea", scroll: false, revert: "valid"});
+};
+
+function checkAnswer(el, i) {
+
+  var array = questions[i],
+      userAnswer = $(el).attr('id'),
+      correct = array[1],
+      caption = array[2],
+      captionEl = $('.answer__container').not(el).find('.description'),
+      next = parseInt(i + 1),
+      nextQuestion = questions[next];
+
+  $('.description').hide();
+  $('.frameAnswer').hide();
+
+  $(el).addClass('answered');
+  $('#quizArea').removeClass('live');
+  $('.answer__container').not(el).addClass('not-answered');
+  $('#dude').hide();
+
+  if(userAnswer == correct) {
+    $(el).addClass('correct');
+  } else {
+    $(el).addClass('incorrect');
+  }
+  $('.footer--caption').hide();
+
+  setTimeout(function() {
+    $(el).find('.frameAnswer').fadeIn(300);
+    $(captionEl).text(caption).fadeIn(300);
+  }, 500);
+
+  setTimeout(function() {
+    if(nextQuestion !== undefined) {
+      $('#next').fadeIn(300);
+    } else {
+      $('#last').fadeIn(300);
+    }
+  }, 2000);
+
+}
+
+function resetQuestion() {
+  $('#dude').show();
+  $('.answer__container')
+    .removeClass('correct')
+    .removeClass('incorrect')
+    .removeClass('answered')
+    .removeClass('not-answered');
+  $('.description').hide().empty();
+}
+
+// QUESTIONS
+// formated as follows:
+// var question# = [
+//   "question text",
+//   "answer", this is either hot or cold
+//   "caption to show"
+// ];
+//
+// then add to list of question at the bottom
+
+question1 = [
+  "I was running and rolled my ankle. It’s swollen and red.",
+  "cold",
+  "The correct answer is ice. Ice will ease the pain from inflammation. If there is bleeding into underlying tissues, ice will help constrict the vessels to reduce blood flow and bruising."
+];
+
+question2 = [
+  "I was moving a couch and my back started to spasm.",
+  "hot",
+  "The correct answer is heat. Heat is best on muscle pain, such as spasms and trigger points. Gentle heat dilates vessels to increase blood flow to damaged tissues."
+];
+
+question3 = [
+  "I have arthritis in my shoulder.",
+  "hot",
+  "The correct answer is heat. Heat can help relax the muscles and ease the pain. It can also stimulate blood flow and reduce stiffness in joints."
+];
+
+question4 = [
+  "I was hiking with friends and sprained my knee.",
+  "cold",
+  "The correct answer is ice. Ice will ease the pain from inflammation. If there is bleeding into underlying tissues, ice will help constrict the vessels to reduce blood flow and bruising."
+];
+
+questions = [
+  question1,
+  question2,
+  question3,
+  question4
+];
+
+
+</script>
+</html>

@@ -1,0 +1,135 @@
+/*****************************************/
+/*          General Styles               */
+/*****************************************/
+
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "myriad-pro", sans-serif;
+    /*font-family: Helvetica, Arial, sans-serif;*/
+    font-weight: 300;
+    background: #2C9576;
+}
+
+strong {
+    font-weight: 600;
+}
+
+
+/*****************************************/
+/*          Page Sections                */
+/*****************************************/
+.wrapper {
+    width: 100vw;
+    height: 100vh;
+    /*overflow: hidden;*/
+    overflow: auto;
+}
+
+.container {
+    max-width: 491px;
+    margin: auto;
+    padding: 52px 64px 23px 33px;
+    position: relative;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+p {
+    font-size: 16px;
+    color: #fff;
+    clear: both;
+    margin: 20px 0 0;
+    letter-spacing: 0.3px;
+}
+
+h2 {
+    font-size: 36px;
+    color: #fff;
+    font-weight: 200;
+    margin-top: 0;
+    letter-spacing: -1px;
+    position: relative;
+    display: inline-block;
+}
+
+h2 span {
+    font-weight: 600;
+}
+
+h2::after {
+    height: 2px;
+    background: #fff;
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: -8px;
+}
+
+.left-text {
+    text-align: left;
+}
+
+.left-text h2::after {
+    left: -33px;
+    width: calc(100% + 33px);
+}
+
+.right-text {
+    text-align: right;
+}
+
+.right-text h2::after {
+    right: -64px;
+    width: calc(100% + 64px);
+}
+
+.section-image {
+    position: absolute;
+}
+
+.cta-link {
+    font-size: 13px;
+    color: #fff;
+    text-decoration: none;
+    font-style: italic;
+    font-weight: 500;
+    line-height: 55px;
+}
+
+/*****************************************/
+/*          Section 1                    */
+/*****************************************/
+#section1 {
+    background: #2C9576;
+    padding-bottom: 48px;
+}
+
+#section1 h2::after {
+    background: #A5CC5C;
+}
+
+#section1 p {
+    max-width: 63%;
+}
+
+#section1 img {
+    width: 240px;
+    right: 64px;
+    top: calc(100% - 119px);
+}
+
+/*****************************************/
+/*          Mobile                       */
+/*****************************************/
+
+
+@media (max-width: 480px) {
+
+    #section1 img {
+        width: 180px;
+        right: 20px;
+        top: calc(100% - 84px);
+    }
+}

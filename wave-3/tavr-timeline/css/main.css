@@ -1,0 +1,257 @@
+/*****************************************/
+/*          General Styles               */
+/*****************************************/
+
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "myriad-pro", sans-serif;
+    font-weight: 300;
+    background: #4BC9E7;
+}
+.wrapper {
+    width: 100vw;
+    height: 100vh;
+    /*overflow: hidden;*/
+    overflow: auto;
+}
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+strong {
+    font-weight: 600;
+}
+
+.header {
+    background: #FF6A3F;
+    padding: 0;
+    overflow: auto;
+}
+
+.header h1 {
+    color: #fff;
+    font-weight: 400;
+    font-size: 60px;
+    width: 47%;
+    float: left;
+    padding-left: 33px;
+    box-sizing: border-box;
+    margin-top: 20px;
+    margin-bottom: 24px;
+}
+.header p {
+    font-size: 18px;
+    line-height: 24px;
+    margin: 43px auto 0;
+    color: #24509a;
+    width: 49%;
+    float: left;
+    box-sizing: border-box;
+}
+
+.cta-link {
+    color: #14418d;
+    font-style: italic;
+    font-weight: 500;
+    text-decoration: none;
+    text-align: right;
+    margin: 60px 0 40px auto;
+    display: block;
+}
+
+/*****************************************/
+/*          Slider                       */
+/*****************************************/
+
+.slider-container {
+    margin-top: 70px;
+}
+.slider {
+    width: 90%;
+    height: 14px;
+    background: #A3DE43;
+    margin: auto;
+    border-radius: 7px;
+    box-shadow: 0 4px 5px rgba(0,0,0,.2), inset 0 4px 5px rgba(0,0,0, .2);
+    position: relative;
+}
+
+.thumb {
+    width: 0;
+    height: 0;
+    border-top: 23px solid transparent;
+    border-bottom: 23px solid transparent;
+    border-left: 37px solid #FF6A3F;
+    /*background: url('../images/arrow.svg') center center no-repeat;
+    background-size: 37px 46px;*/
+    position: absolute;
+    top: 50% !important;
+    transform: translate(0, -50%);
+}
+
+.thumb.animate {
+    animation-name: timelapse;
+    animation-duration: 20s;
+    animation-delay: 0s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+
+@keyframes timelapse {
+    0% {
+        left: 0;
+    }
+
+    100% {
+        left: calc(100% - 37px);
+    }
+}
+
+.above-slider {
+    position: relative;
+    width: 90%;
+    height: 100px;
+    margin: auto;
+}
+
+.below-slider {
+    position: relative;
+    width: 90%;
+    height: 100px;
+    margin: auto;
+}
+
+.time-popup {
+    color: #14418d;
+    font-size: 18px;
+    line-height: 18px;
+    text-align: center;
+    transform: translateX(-50%);
+    position: absolute;
+    width: 18%;
+    opacity: 0;
+    transition: all 1s ease;
+}
+
+.time0 {
+    opacity: 1;
+}
+
+.time6 {
+    opacity: 1;
+    max-width: 125px;
+}
+
+.reveal {
+    opacity: 1;
+}
+
+.time {
+    color: #fff;
+    font-size: 40px;
+    display: block;
+    margin: 15px 0;
+    position: relative;
+}
+
+.above-slider .time-popup {
+    bottom: 20px;
+}
+
+.below-slider .time-popup {
+    top: 20px;
+}
+
+.time0 .time::after {
+    content: 'minutes';
+    position: absolute;
+    font-size: 18px;
+    top: 9px;
+    margin-left: 5px;
+}
+
+/*****************************************/
+/*          Laptop Styles                */
+/*****************************************/
+
+@media (max-width: 1200px) {
+    .container {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+}
+
+@media (max-width: 1150px) {
+    .header h1 {
+        float: none;
+        clear: both;
+        width: 100%;
+        text-align: center;
+        padding-left: 0;
+    }
+
+    .header p {
+        float: none;
+        clear: both;
+        width: 100%;
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+}
+
+/*****************************************/
+/*          Tablet Styles                */
+/*****************************************/
+
+@media (max-width: 1024px) {
+    .time0 {
+        transform: translateX(-25%);
+    }
+    .time6 {
+        transform: translateX(-75%);
+    }
+}
+
+/*****************************************/
+/*          Mobile Styles                */
+/*****************************************/
+
+@media (max-width: 768px) {
+    .time-popup {
+        font-size: 15px;
+    }
+
+    .time-popup span {
+        font-size: 20px;
+    }
+
+    .time0 .time::after {
+        font-size: 14px;
+        top: 0;
+    }
+
+    .cta-link {
+        margin-top: 100px;
+    }
+
+    .header h1 {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 400px) {
+    .slider-container {
+        margin-top: 100px;
+    }
+
+    .time-popup {
+        font-size: 12px;
+    }
+
+    .cta-link {
+        margin-top: 130px;
+    }
+}

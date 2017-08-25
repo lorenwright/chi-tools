@@ -1,0 +1,180 @@
+/*****************************************/
+/*          General Styles               */
+/*****************************************/
+
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "myriad-pro", sans-serif;
+    /*font-family: Helvetica, Arial, sans-serif;*/
+    font-weight: 300;
+    background: #8444AC;
+}
+
+strong {
+    font-weight: 600;
+}
+
+/*****************************************/
+/*          Page Sections                */
+/*****************************************/
+.wrapper {
+    width: 100vw;
+    height: 100vh;
+    /*overflow: hidden;*/
+    overflow: auto;
+}
+
+.container {
+    max-width: 491px;
+    margin: auto;
+    padding: 0 64px 0 33px;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.section {
+    padding: 50px 0;
+}
+
+p {
+    font-size: 16px;
+    color: #fff;
+    clear: both;
+    margin: 20px 0 0;
+    letter-spacing: 0.3px;
+}
+
+.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+
+.clearfix {
+    display: inline-block;
+}
+
+h2 {
+    font-size: 37px;
+    line-height: 38px;
+    color: #fff;
+    font-weight: 200;
+    margin-top: 0;
+    margin-bottom: 32px;
+    letter-spacing: -1px;
+    position: relative;
+    display: inline-block;
+}
+
+h2 span {
+    font-weight: 600;
+    margin-left: 24px;
+}
+
+h2::after {
+    height: 2px;
+    background: #fff;
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: -32px;
+}
+
+.left-text {
+    text-align: left;
+}
+
+.left-text h2 {
+    padding-left: 24px;
+    text-indent: -24px;
+}
+
+.left-text h2::after {
+    left: -33px;
+    width: calc(100% + 33px);
+}
+
+.left-text p {
+    margin-left: 24px;
+}
+
+.right-text {
+    text-align: right;
+}
+
+.right-text h2::after {
+    right: -64px;
+    width: calc(100% + 64px);
+}
+
+.section-image {
+    margin-top: 24px;
+}
+
+.cta-link {
+    font-size: 13px;
+    color: #fff;
+    text-decoration: none;
+    font-style: italic;
+    font-weight: 500;
+    line-height: 55px;
+}
+
+.left-text .cta-link {
+    margin-left: 24px;
+}
+
+/*****************************************/
+/*          Section 3                    */
+/*****************************************/
+#section3 {
+    background: #8444AC;
+    padding-top: 45px;
+    padding-bottom: 0;
+    overflow: auto;
+}
+
+#section3 .container {
+    background: url('../images/nurse.svg') no-repeat;
+    background-size: 166px;
+    background-position: calc(100% + 21px) 0;
+}
+
+#section3 h2::after {
+    background: #B37BC4;
+}
+
+#section3 p {
+    width: 56%;
+}
+
+#section3 img {
+    width: 148px;
+    position: absolute;
+    right: 65px;
+    bottom: 84px;
+}
+
+/*****************************************/
+/*          Mobile                       */
+/*****************************************/
+
+@media (max-width: 485px) {
+
+    h2 {
+        font-size: 30px;
+        line-height: 30px;
+    }
+    .left-text p {
+        margin-left: 24px;
+    }
+
+    #section3 p {
+        width: 60%;
+    }
+}

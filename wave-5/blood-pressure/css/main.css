@@ -1,0 +1,386 @@
+/*****************************************/
+/*          General Styles               */
+/*****************************************/
+
+body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+    font-family: "myriad-pro", sans-serif;
+    /*font-family: Helvetica, Arial, sans-serif;*/
+    font-weight: 300;
+    background: #86c9bd;
+    color: #fff;
+    transition: background .5s ease-in;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.wrapper {
+    width: 100vw;
+    height: 100vh;
+    /*overflow: hidden;*/
+    overflow: auto;
+}
+.container {
+    max-width: 1200px;
+    padding: 0;
+    margin: auto;
+    position: relative;
+    box-sizing:border-box;
+}
+
+img,
+svg {
+    vertical-align: middle;
+}
+
+/*****************************************/
+/*          Heading Styles               */
+/*****************************************/
+
+.heading {
+    height: 100vh;
+    width: 35%;
+    background: #12b0b9;
+    padding: 40px;
+    float: left;
+    box-sizing: border-box;
+}
+
+.heading h1 {
+    font-weight: 300;
+    font-size: 48px;
+    line-height: 48px;
+    margin-top: 0;
+}
+
+.heading p {
+    font-size: 22px;
+    line-height: 24px;
+}
+
+.heading p span {
+    display: inline-block;
+}
+
+/*****************************************/
+/*          Heart Dial Styles            */
+/*****************************************/
+
+.heart-dial-container {
+    float: left;
+    width: 65%;
+    height: 100vh;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.heart-dial {
+    margin: 45px auto;
+    width: 80%;
+    max-width: 615px;
+    position: relative;
+    cursor: pointer;
+
+}
+
+.heart {
+    width: 68%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.heart-shape {
+    width: 100%;
+}
+
+.heart-text {
+    width: 47%;
+    position: absolute;
+    top: 64px;
+    left: 55px;
+    opacity: 0;
+    line-height: 17px;
+    transition: opacity .5s ease;
+}
+
+.heart-text .heart-title {
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 16px;
+    letter-spacing: 2px;
+}
+
+.heart-text p {
+    margin-top: 0;
+}
+
+.heart-text a {
+    font-weight: 600;
+    display: block;
+    float: right;
+    color: #fff;
+    text-decoration: none;
+    padding-right: 20px;
+}
+
+#heart-text-1 {
+    opacity: 1;
+    width: 24%;
+}
+
+.dial {
+    background: #98999b;
+    border-radius: 50%;
+    position: relative;
+    width: 58%;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.dial-quarters {
+    width: 100%;
+    position: absolute;
+    height: 100%;
+    z-index: 1;
+}
+
+.dial-quarter {
+    opacity: 0;
+    transition: all .5s ease-in;
+}
+
+.dial-quarters .quarter-1 {
+    width: 50%;
+    height: 50%;
+    background: #C0D744;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 100% 0 0 0;
+}
+
+.dial-quarters .quarter-2 {
+    width: 50%;
+    height: 50%;
+    background: #FDD962;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    border-radius: 0 100% 0 0;
+}
+
+.dial-quarters .quarter-3 {
+    width: 50%;
+    height: 50%;
+    background: #E65240;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 0 0 100% 0;
+    opacity: 1;
+}
+
+.dial-quarters .quarter-4 {
+    width: 50%;
+    height: 50%;
+    background: #009978;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    border-radius: 0 0 0 100%;
+}
+
+.dial-overlay {
+    z-index: 2;
+    position: absolute;
+}
+
+/*****************************************/
+/*          Hand Styles                  */
+/*****************************************/
+
+.hand {
+    width: 8%;
+    top: 50%;
+    left: calc(50% - 17px);
+    transform-origin: center 12%;
+    -webkit-transform-origin: center 12%;
+    -moz-transform-origin: center 12%;
+    position: absolute;
+    z-index: 3;
+    transition: all .5s cubic-bezier(0,1.5,.8,1);
+}
+
+.hand1 {
+    transform: rotate(-25deg);
+    -moz-transform: rotate(-25deg);
+    -webkit-transform: rotate(-25deg);
+    transition: all .5s ease;
+}
+
+.hand2 {
+    transform: rotate(-65deg);
+    -moz-transform: rotate(-65deg);
+    -webkit-transform: rotate(-65deg);
+}
+
+.hand3 {
+    transform: rotate(-115deg);
+    -moz-transform: rotate(-115deg);
+    -webkit-transform: rotate(-115deg);
+}
+
+.hand4 {
+    transform: rotate(-158deg);
+    -moz-transform: rotate(-158deg);
+    -webkit-transform: rotate(-158deg);
+}
+
+.hand5 {
+    transform: rotate(-205deg);
+    -moz-transform: rotate(-205deg);
+    -webkit-transform: rotate(-205deg);
+}
+
+.hand6 {
+    transform: rotate(-245deg);
+    -moz-transform: rotate(-245deg);
+    -webkit-transform: rotate(-245deg);
+}
+
+.hand7 {
+    transform: rotate(-292deg);
+    -moz-transform: rotate(-292deg);
+    -webkit-transform: rotate(-292deg);
+}
+
+.hand8 {
+    transform: rotate(-338deg);
+    -moz-transform: rotate(-338deg);
+    -webkit-transform: rotate(-338deg);
+}
+
+/*****************************************/
+/*          Learn More Styles            */
+/*****************************************/
+
+.learnmore {
+    display: block;
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 20px;
+    bottom: 50px;
+    right: 50px;
+    position: absolute;
+}
+
+.pulse {
+    -webkit-animation:pulse 1s 4 ease-in alternate;
+    -moz-animation:pulse 1s 4 ease-in alternate;
+    animation:pulse 1s 4 ease-in alternate;
+}
+
+/*****************************************/
+/*          Mobile Styles                */
+/*****************************************/
+
+@media (max-width: 1199px) {
+    .heart-text {
+        font-size: 12px;
+        width: 40%;
+        top: 60px;
+        line-height: 14px;
+    }
+}
+
+@media (max-width: 900px) {
+    .dial {
+        width: 45%;
+    }
+
+    .heart-text {
+        width: 55%;
+    }
+}
+
+@media (max-width: 768px) {
+    .heading {
+        width: 100%;
+        height: auto;
+    }
+
+    .heart-dial-container {
+        height: auto;
+        width: 100%;
+        min-height: 550px;
+    }
+
+    .heart-dial {
+        width: 95%;
+    }
+
+    .heart {
+        width: 100%;
+    }
+
+    .heart-text {
+        font-size: 16px;
+        line-height: 18px;
+        top: 65px;
+        width: 40%;
+    }
+
+    .dial {
+        top: 65px;
+    }
+
+    .hand {
+        left: calc(50% - 10px)
+    }
+
+    .learnmore {
+        bottom: 30px;
+        right: 30px;
+    }
+
+}
+
+@media (max-width: 440px) {
+
+    .heading h1 {
+        font-size: 30px;
+        line-height: 32px;
+    }
+
+    .heading p {
+        font-size: 16px;
+        line-height: 18px;
+    }
+
+    .heart-dial-container {
+        min-height: 400px;
+    }
+
+    .heart-text {
+        font-size: 12px;
+        line-height: 14px;
+        width: 50%;
+    }
+
+    .dial {
+        width: 30%;
+    }
+}
+
+/*****************************************/
+/*          Animations                   */
+/*****************************************/
+
+@-moz-keyframes pulse { 100% { -moz-transform: scale(1.1,1.1); } }
+@-webkit-keyframes pulse { 100% { -webkit-transform: scale(1.1,1.1); } }
+@keyframes pulse { 100% { -webkit-transform: scale(1.1,1.1); transform:scale(1.1,1.1); } }

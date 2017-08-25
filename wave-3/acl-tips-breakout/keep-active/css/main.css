@@ -1,0 +1,187 @@
+/*****************************************/
+/*          General Styles               */
+/*****************************************/
+
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "myriad-pro", sans-serif;
+    /*font-family: Helvetica, Arial, sans-serif;*/
+    font-weight: 300;
+    background: #214F97;
+}
+
+strong {
+    font-weight: 600;
+}
+
+/*****************************************/
+/*          Page Sections                */
+/*****************************************/
+.wrapper {
+    width: 100vw;
+    height: 100vh;
+    /*overflow: hidden;*/
+    overflow: auto;
+}
+
+.container {
+    max-width: 491px;
+    margin: auto;
+    padding: 0 64px 0 33px;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.section {
+    padding: 50px 0;
+}
+
+p {
+    font-size: 16px;
+    color: #fff;
+    clear: both;
+    margin: 20px 0 0;
+    letter-spacing: 0.3px;
+}
+
+.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+
+.clearfix {
+    display: inline-block;
+}
+
+h2 {
+    font-size: 37px;
+    line-height: 38px;
+    color: #fff;
+    font-weight: 200;
+    margin-top: 0;
+    margin-bottom: 32px;
+    letter-spacing: -1px;
+    position: relative;
+    display: inline-block;
+}
+
+h2 span {
+    font-weight: 600;
+}
+
+h2::after {
+    height: 2px;
+    background: #fff;
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: -32px;
+}
+
+.left-text {
+    text-align: left;
+}
+
+.left-text h2 {
+    padding-left: 24px;
+    text-indent: -24px;
+}
+
+.left-text h2::after {
+    left: -33px;
+    width: calc(100% + 33px);
+}
+
+.left-text p {
+    margin-left: 24px;
+}
+
+.right-text {
+    text-align: right;
+}
+
+.right-text h2::after {
+    right: -64px;
+    width: calc(100% + 64px);
+}
+
+.section-image {
+    margin-top: 24px;
+}
+
+.cta-link {
+    font-size: 13px;
+    color: #fff;
+    text-decoration: none;
+    font-style: italic;
+    font-weight: 500;
+    line-height: 55px;
+}
+
+.left-text .cta-link {
+    margin-left: 24px;
+}
+
+/*****************************************/
+/*          Section 4                    */
+/*****************************************/
+#section4 {
+    background: #214F97;
+    padding: 0;
+    overflow: auto;
+}
+
+#section4 .container {
+    background: url('../images/footsteps.png') no-repeat;
+    background-size: 110px;
+    background-position: 50px -19px;
+    padding: 45px 65px 3px 35px;
+}
+
+#section4 h2 {
+    margin-bottom: 66px;
+}
+
+#section4 h2::after {
+    background: #4DC3E1;
+    bottom: -66px;
+    width: calc(100% + 65px);
+}
+
+#section4 p {
+    padding-left: 33%;
+}
+
+#section4 img {
+    position: absolute;
+    width: 199px;
+    left: 27px;
+    top: calc(100% - 104px);
+}
+
+/*****************************************/
+/*          Mobile                       */
+/*****************************************/
+
+@media (max-width: 485px) {
+    h2 {
+        font-size: 30px;
+        line-height: 30px;
+    }
+    .left-text p {
+        margin-left: 24px;
+    }
+
+    #section4 .container {
+        background-position: 20px 10px;
+    }
+    #section4 p {
+        padding-left: 42%;
+    }
+}

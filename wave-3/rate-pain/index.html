@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Rate your joint pain</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="fonts/font-awesome-4.6.3/css/font-awesome.min.css">
+        <script src="https://use.typekit.net/jnd5ogo.js"></script>
+        <script>try{Typekit.load({ async: true });}catch(e){}</script>
+    </head>
+    <body>
+
+        <div class="header">
+            <h1 class="container">rate your joint pain</h1>
+            <p class="container">If you’re bothered by joint pain, it’s smart to get it diagnosed and treated before it gets worse. Sometimes, patients are asked to rate their pain on a scale of 1 to 10. How does yours rate?</p>
+        </div>
+
+        <div class="slider container">
+            <ul class="above-slider slider-labels">
+                <li class="pain-label pain-0"><img src="images/mosquito.svg" class="mosquito" /></li>
+                <li class="pain-label pain-1"><span class="number">1-2</span>pecked by a very <br />persistent woodpecker</li>
+                <li class="pain-label pain-3"><img src="images/porcupine.svg" class="porcupine" /></li>
+                <li class="pain-label pain-5"><span class="number">5-6</span>squeezed in <br />a vise grip</li>
+                <li class="pain-label pain-7"><img src="images/strongman.svg" class="strongman" /></li>
+                <li class="pain-label pain-9"><span class="number">9</span>rained on <br />by anvils</li>
+                <li class="pain-label pain-10"><img src="images/bear.svg" class="bear" /></li>
+            </ul>
+            <input type="range" min="0" max="6" value="0" step="0.01" />
+            <ul class="ticks">
+                <li id="tick-0"></li>
+                <li id="tick-1"></li>
+                <li id="tick-3"></li>
+                <li id="tick-5"></li>
+                <li id="tick-7"></li>
+                <li id="tick-9"></li>
+                <li id="tick-10"></li>
+            </ul>
+            <ul class="below-slider slider-labels">
+                <li class="pain-label pain-0"><span class="number">0</span>a mild <br />mosquito bite</li>
+                <li class="pain-label pain-1"><img src="images/woodpecker.svg" class="woodpecker" /></li>
+                <li class="pain-label pain-3"><span class="number">3-4</span>cuddling with <br />a porcupine</li>
+                <li class="pain-label pain-5"><img src="images/vise-grip.svg" class="vise-grip" /></li>
+                <li class="pain-label pain-7"><span class="number">7-8</span>ambushed by a <br />hammer-wielding <br />circus strongman</li>
+                <li class="pain-label pain-9"><img src="images/anvil.svg" class="anvil" /></li>
+                <li class="pain-label pain-10"><span class="number">10</span><div class="label-copy">mauled by an <br />enraged grizzly</div></li>
+            </ul>
+        </div>
+
+        <div class="container">
+            <a href="#0" class="ctaBtn" target="_blank">schedule an appointment &raquo;</a>
+        </div>
+
+
+        <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>

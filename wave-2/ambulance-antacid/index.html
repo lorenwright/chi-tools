@@ -1,0 +1,180 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Ambulance or Antacid</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/main.css">
+        <script src="https://use.typekit.net/jnd5ogo.js"></script>
+        <script>try{Typekit.load({ async: true });}catch(e){}</script>
+    </head>
+    <body>
+
+        <!-- Initial Screen -->
+        <div id="initial-screen" class="screen">
+            <div class="container">
+                <div class="header-images">
+                    <img class="ambulance" src="images/ambulance.svg" />
+                    <img class="antacid" src="images/antacid.svg" />
+                    <div class="divider"></div>
+                </div>
+                <h1>Ambulance or antacid?</h1>
+                <p>Would you know whether the symptoms you’re feeling indicate a heart attack or indigestion?</p>
+                <a id="start">Take this quiz to find out &raquo;</a>
+            </div>
+        </div>
+
+        <!-- Question 1 -->
+        <div id="question-1" class="question screen">
+            <div class="container">
+                <div class="question-number">1.</div>
+                <p>You’re lying on the couch relaxing after dinner when you start to feel a strong burning sensation in your upper abdomen and chest.</p>
+
+                <div class="answer-options">
+                    <a id="ambulance-1" class="ambulance-answer"><span class="italic-text">call an </span><span class="bold-text">ambulance</span></a>
+                    <span class="or">or</span>
+                    <a id="antacid-1" class="antacid-answer" data-answer="true"><span class="italic-text">take an </span><span class="bold-text">antacid</span></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Question 2 -->
+        <div id="question-2" class="question screen">
+            <div class="container">
+                <div class="question-number">2.</div>
+                <p>You’re at a restaurant having a glass of wine with your meal. You start to feel some pressure in your chest and become dizzy and short of breath.</p>
+
+                <div class="answer-options">
+                    <a id="ambulance-2" class="ambulance-answer" data-answer="true"><span class="italic-text">call an </span><span class="bold-text">ambulance</span></a>
+                    <span class="or">or</span>
+                    <a id="antacid-2" class="antacid-answer"><span class="italic-text">take an </span><span class="bold-text">antacid</span></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Question 3 -->
+        <div id="question-3" class="question screen">
+            <div class="container">
+                <div class="question-number">3.</div>
+                <p>You awaken in the middle of the night with indigestion. As you sit up in bed, you experience pain in your arms and neck.</p>
+
+                <div class="answer-options">
+                    <a id="ambulance-3" class="ambulance-answer" data-answer="true"><span class="italic-text">call an </span><span class="bold-text">ambulance</span></a>
+                    <span class="or">or</span>
+                    <a id="antacid-3" class="antacid-answer"><span class="italic-text">take an </span><span class="bold-text">antacid</span></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Question 4 -->
+        <div id="question-4" class="question screen">
+            <div class="container">
+                <div class="question-number">4.</div>
+                <p>After a big lunch, you feel uncomfortable. There’s tightness in your chest.<br /> It’s the same feeling you had the other day, but it went away.</p>
+
+                <div class="answer-options">
+                    <a id="ambulance-4" class="ambulance-answer" data-answer="true"><span class="italic-text">call an </span><span class="bold-text">ambulance</span></a>
+                    <span class="or">or</span>
+                    <a id="antacid-4" class="antacid-answer"><span class="italic-text">take an </span><span class="bold-text">antacid</span></a>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Answer 1 -->
+        <div id="answer-1" class="answer screen">
+            <div class="container">
+                <div class="answer-head">
+                    <div class="answer-head-left">
+                        <div class="right-wrong"></div>
+                        <a class="next-question">Next Question &raquo;</a>
+                    </div>
+                    <div class="answer-head-right">
+                        <img class="antacid answer-icon" src="images/antacid.svg" />
+                    </div>
+                </div>
+                <div class="answer-body">
+                    <p><strong>Antacid:</strong></p>
+                    <p>Heartburn often occurs after a meal and/or while lying down. It’s true that burning in the chest may also indicate a heart attack, but based on the circumstances preceding the symptoms, they’re more likely to be caused by indigestion. If burping relieves the symptoms, you’re probably fine.</p>
+                    <a href="#">learn more &raquo;</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Answer 2 -->
+        <div id="answer-2" class="answer screen">
+            <div class="container">
+                <div class="answer-head">
+                    <div class="answer-head-left">
+                        <div class="right-wrong"></div>
+                        <a class="next-question">Next Question &raquo;</a>
+                    </div>
+                    <div class="answer-head-right">
+                        <img class="ambulance answer-icon" src="images/ambulance.svg" />
+                    </div>
+                </div>
+                <div class="answer-body">
+                    <p><strong>Ambulance:</strong></p>
+                    <p>It’s likely what you’re feeling has nothing to do with what you’re eating. While symptoms vary from person to person, the most common sign of heart attack is chest pain. And when it’s accompanied by shortness of breath, dizziness and sweating, there’s a very good chance it’s a heart-related issue.</p>
+                    <a href="#">talk to your doctor &raquo;</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Answer 3 -->
+        <div id="answer-3" class="answer screen">
+            <div class="container">
+                <div class="answer-head">
+                    <div class="answer-head-left">
+                        <div class="right-wrong"></div>
+                        <a class="next-question">Next Question &raquo;</a>
+                    </div>
+                    <div class="answer-head-right">
+                        <img class="ambulance answer-icon" src="images/ambulance.svg" />
+                    </div>
+                </div>
+                <div class="answer-body">
+                    <p><strong>Ambulance:</strong></p>
+                    <p>There’s a chance you ate something that disagreed with you and then slept in an awkward position. But it’s also possible you’re experiencing heart attack symptoms. Not everyone gets chest pains. Sometimes pain in the arms, jaw and neck can signal a heart condition. When in doubt, get it checked out.</p>
+                    <a href="#">talk to your doctor &raquo;</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Answer 4 -->
+        <div id="answer-4" class="answer screen">
+            <div class="container">
+                <div class="answer-head">
+                    <div class="answer-head-left">
+                        <div class="right-wrong"></div>
+                        <a class="see-results">See Your Results &raquo;</a>
+                    </div>
+                    <div class="answer-head-right">
+                        <img class="ambulance answer-icon" src="images/ambulance.svg" />
+                    </div>
+                </div>
+                <div class="answer-body">
+                    <p><strong>Ambulance:</strong></p>
+                    <p>Some heart attacks are sudden and intense. But many start slowly and are preceded by episodes of unexplained chest pain that can subside within a few hours. Take this as a warning sign and don’t wait for the next episode. Get yourself checked out immediately.</p>
+                    <a href="#">talk to your doctor &raquo;</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- End screen -->
+        <div id="end" class="screen">
+            <div class="container">
+                <div class="score">
+                    <div class="correctly-answered"><div class="correct">0</div><span> of </span><div class="totalQuestions"></div></div>
+                    <div class="correctly-answered-text">were correctly answered</div>
+                </div>
+
+                <p>If you still have questions don’t hesitate to call your doctor to learn more.</p>
+                <a class="make-appointment">make an appointment &raquo;</a>
+            </div>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>

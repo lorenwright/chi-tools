@@ -1,0 +1,196 @@
+/*****************************************/
+/*          General Styles               */
+/*****************************************/
+
+body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+    font-family: "myriad-pro", sans-serif;
+    /*font-family: Helvetica, Arial, sans-serif;*/
+    font-weight: 300;
+    background: #009778;
+}
+.wrapper {
+    width: 100vw;
+    height: 100vh;
+    /*overflow: hidden;*/
+    overflow: auto;
+}
+.container {
+    max-width:491px;
+    padding: 0 30px;
+    margin: auto;
+    position: relative;
+    box-sizing:border-box;
+}
+
+header {
+    background: #EDAD42;
+    padding: 20px 30px 10px;
+    box-sizing: border-box;
+}
+
+header h1 {
+    color: #fff;
+    font-size: 34px;
+    line-height: 36px;
+    letter-spacing: -1px;
+    font-weight: 200;
+    width: 56%;
+    margin: 0;
+}
+
+header .icon {
+    float: right;
+    background: #EDAD42;
+    height: 109px;
+    width: 111px;
+    border-radius: 50%;
+    position: absolute;
+    right: 10px;
+    top: -13px;
+}
+
+header .icon img {
+    width: 89px;
+    vertical-align: middle;
+    margin: auto;
+    display:block;
+    transform: translateY(5px);
+}
+
+
+/*****************************************/
+/*          Initial Screen               */
+/*****************************************/
+
+.initial-screen {
+    margin-top: 30px;
+}
+
+.choice {
+    clear: both;
+    margin: 20px 0;
+    position: relative;
+    overflow: auto;
+    -ms-overflow-style: none;
+}
+
+.choice input[type="radio"] {
+    display: none;
+}
+
+.choice label {
+    color: #fff;
+    font-size: 22px;
+}
+
+.choice .custom-radio {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    background: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.choice input:checked + span::before {
+    content: '';
+    background: #DD5543;
+    width: 12px;
+    height: 12px;
+    display: block;
+    border-radius: 50%;
+}
+
+.choice-left {
+    float: left;
+}
+.choice-right {
+    float: left;
+    width: calc(100% - 40px);
+    margin-left: 40px;
+}
+
+/*****************************************/
+/*          Answer Screen                */
+/*****************************************/
+.answer-screen {
+    display: none;
+    margin-top: 30px;
+}
+
+h2 {
+    font-weight: 200;
+    font-size: 24px;
+    color: #fff;
+    display: inline-block;
+    position: relative;
+    margin: 0;
+}
+
+h2::after {
+    content: '';
+    height: 2px;
+    width: calc(100% + 30px);
+    position: absolute;
+    background: #EDAD42;
+    display: block;
+    left: -30px;
+    bottom: -5px;
+}
+
+.answer-screen p {
+    color: #fff;
+    font-size: 18px;
+    line-height: 18px;
+    margin: 28px 0 0 0;
+}
+
+.answer-footer {
+    margin-top: 26px;
+}
+
+.answer-footer span {
+    float: left;
+}
+
+.answer-footer span i {
+    font-size: 40px;
+    color: #F9D76B;
+    cursor: pointer;
+}
+
+.answer-footer a {
+    color: #fff;
+    text-align: right;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 18px;
+    float: right;
+}
+
+.answer-footer a::before {
+    content:'';
+    background: url('../images/schedule-checkup.svg') 27px 27px;
+    background-size: cover;
+    height: 27px;
+    width: 27px;
+    display: inline-block;
+    margin-right: 11px;
+    transform: translateY(6px);
+}
+
+/*****************************************/
+/*          Mobile                       */
+/*****************************************/
+@media (max-width: 470px) {
+    .choice label {
+        font-size: 16px;
+    }
+}

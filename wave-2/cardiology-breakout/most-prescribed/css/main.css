@@ -1,0 +1,162 @@
+/*****************************************/
+/*          General Styles               */
+/*****************************************/
+
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "myriad-pro", sans-serif;
+    /*font-family: Helvetica, Arial, sans-serif;*/
+    font-weight: 300;
+    background: #00ADB5;
+}
+
+strong {
+    font-weight: 600;
+}
+
+/*****************************************/
+/*          Page Sections                */
+/*****************************************/
+.wrapper {
+    width: 100vw;
+    height: 100vh;
+    /*overflow: hidden;*/
+}
+
+.container {
+    max-width: 491px;
+    margin: auto;
+    padding: 0 64px 0 33px;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.section {
+    padding: 50px 0 0;
+    clear: both;
+}
+
+p {
+    font-size: 16px;
+    color: #fff;
+    clear: both;
+    margin: 20px 0 0;
+    letter-spacing: 0.3px;
+}
+
+h2 {
+    font-size: 38px;
+    line-height: 38px;
+    color: #fff;
+    font-weight: 200;
+    margin-top: 0;
+    margin-bottom: 32px;
+    letter-spacing: -1px;
+    position: relative;
+    display: inline-block;
+}
+
+h2 span {
+    font-weight: 600;
+    padding-left: 24px;
+}
+
+h2::after {
+    height: 2px;
+    background: #fff;
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: -32px;
+}
+
+.left-text {
+    text-align: left;
+}
+
+.left-text h2 {
+    padding-left: 24px;
+    text-indent: -24px;
+}
+
+.left-text h2::after {
+    left: -33px;
+    width: calc(100% + 33px);
+}
+
+.left-text p {
+    margin-left: 24px;
+}
+
+.right-text {
+    text-align: right;
+}
+
+.right-text h2::after {
+    right: -64px;
+    width: calc(100% + 64px);
+}
+
+.section-image {
+    margin-top: 24px;
+}
+
+.cta-link {
+    font-size: 13px;
+    color: #fff;
+    text-decoration: none;
+    font-style: italic;
+    font-weight: 500;
+    line-height: 55px;
+    clear: both;
+    display: block;
+}
+
+.left-text .cta-link {
+    margin-left: 24px;
+}
+
+/*****************************************/
+/*          Section 1                    */
+/*****************************************/
+#section1 {
+    background: #00ADB5;
+    padding-top: 32px;
+    padding-bottom: 7px;
+}
+
+#section1 h2::after {
+    background: #009778;
+    width: 100%;
+}
+
+#section1 p {
+    max-width: 60%;
+}
+
+#section1 img {
+    width: 146px;
+    position: absolute;
+    right: 65px;
+    bottom: 11px;
+}
+
+/*****************************************/
+/*          Mobile                       */
+/*****************************************/
+
+@media (max-width: 455px) {
+
+    h2 {
+        font-size: 30px;
+        line-height: 30px;
+    }
+    .left-text p {
+        margin-left: 24px;
+    }
+    #section1 img {
+        right: 40px;
+    }
+}

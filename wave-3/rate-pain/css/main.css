@@ -1,0 +1,380 @@
+/*****************************************/
+/*          General Styles               */
+/*****************************************/
+
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "myriad-pro", sans-serif;
+    /*font-family: Helvetica, Arial, sans-serif;*/
+    font-weight: 300;
+    background: #E45240;
+}
+.wrapper {
+    width: 100vw;
+    height: 100vh;
+    /*overflow: hidden;*/
+    overflow: auto;
+}
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+strong {
+    font-weight: 600;
+}
+
+p {
+    color: #fff;
+    text-align: center;
+}
+
+h1 {
+    color: #fff;
+    text-align: center;
+    font-weight: 400;
+    font-size: 44px;
+}
+
+h2 {
+    color: #fff;
+    text-align: center;
+    font-size: 44px;
+    font-weight: 400;
+    margin-top: 0;
+}
+
+
+/*****************************************/
+/*          Rate your joint pain         */
+/*****************************************/
+
+.header {
+    background: #0093C8;
+    padding: 45px 0 30px;
+}
+
+.header p {
+    font-size: 18px;
+    width: 45%;
+    line-height: 30px;
+    margin: 19px auto 0;
+}
+
+.ctaBtn {
+    color: #fff;
+    font-size: 26px;
+    font-weight: 600;
+    font-style: italic;
+    text-decoration: none;
+    text-align: right;
+    display: block;
+    background: none;
+    border: none;
+    margin: 0 auto 50px;
+}
+
+/* Slider */
+
+.slider {
+    position: relative;
+    margin: 60px auto 32px;
+}
+
+.slider input {
+    width: 84%;
+    margin: auto;
+    display: block;
+    -webkit-appearance: none;
+    background: transparent;
+}
+
+.slider input:focus {
+    outline: none;
+}
+
+.slider input::-moz-focus-outer {
+    border: 0;
+}
+
+.slider input::-ms-track {
+    width: 100%;
+    cursor: pointer;
+    background: transparent;
+    border-color: transparent;
+    color: transparent;
+}
+
+/* Chrome */
+.slider input::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: 12px solid #fff;
+    height: 46px;
+    width: 46px;
+    border-radius: 50%;
+    background: #94D831;
+    cursor: pointer;
+    margin: -18px 0 0 0;
+}
+
+/* Firefox */
+.slider input::-moz-range-thumb {
+    border: 12px solid #fff;
+    height: 22px;
+    width: 22px;
+    border-radius: 50%;
+    background: #94D831;
+    cursor: pointer;
+    position: relative;
+    transform: translateX(-8px);
+}
+
+/* IE */
+.slider input::-ms-thumb {
+    border: 12px solid #fff;
+    height: 22px;
+    width: 22px;
+    border-radius: 50%;
+    background: #94D831;
+    cursor: pointer;
+    margin-top: 0px;
+    transform: translateX(1px);
+}
+
+.slider input::-ms-tooltip {
+    display: none;
+}
+
+.slider input::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 12px;
+  cursor: pointer;
+  background: #F8A928;
+  border-radius: 5px;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, .5);
+}
+
+.slider input::-moz-range-track {
+  width: 100%;
+  height: 12px;
+  cursor: pointer;
+  background: #F8A928;
+  border-radius: 5px;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, .5);
+}
+
+.slider input::-ms-track {
+  width: 100%;
+  height: 12px;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  border-width: 16px 0;
+  color: transparent;
+}
+.slider input::-ms-fill-lower {
+  background: #F8A928;
+  border-radius: 5px;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, .5);
+}
+.slider input::-ms-fill-upper {
+  background: #F8A928;
+  border-radius: 5px;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, .5);
+}
+
+.slider .ticks {
+    list-style-type: none;
+    width: 82%;
+    margin: auto;
+    padding: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+}
+
+.slider .ticks li {
+    background: #fff;
+    width: 3px;
+    height: 30px;
+    display: block;
+    transform: translateY(-22px);
+}
+
+input[type="range" i]::-webkit-slider-thumb {
+    position: relative;
+    z-index: 2;
+}
+
+input[type="range" i]::-moz-range-thumb{
+    position: relative;
+    z-index: 2;
+}
+
+input[type="range" i]::-ms-thumb {
+    position: relative;
+    z-index: 2;
+}
+
+.ie .slider .ticks {
+    display: none;
+}
+
+/* slider labels */
+
+.slider-labels {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    list-style-type: none;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 94%;
+    margin: auto;
+    padding: 0;
+}
+
+.slider-labels li {
+    color: #fff;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    width: 150px;
+}
+
+.slider-labels li span {
+    font-size: 30px;
+    display: block;
+    margin-bottom: 11px;
+}
+
+.slider-labels li img {
+    display: block;
+    margin: auto;
+}
+
+.above-slider {
+    margin-bottom: 20px;
+}
+
+.below-slider {
+    margin-top: 20px;
+
+}
+
+.mosquito {
+    width: 99px;
+}
+
+.porcupine {
+    width: 96px;
+}
+
+.strongman {
+    width: 96px;
+}
+
+.bear {
+    width: 76px;
+}
+
+.woodpecker {
+    width: 59px;
+}
+
+.vise-grip {
+    width: 46px;
+}
+
+.anvil {
+    width: 84px;
+}
+
+.pain-label {
+    opacity: 0;
+}
+
+.pain-0,
+.pain-10 {
+    opacity: 1;
+}
+
+.pain-10 .bear,
+.pain-10 .label-copy {
+    opacity: 0;
+}
+
+
+/*****************************************/
+/*          Laptop Styles                */
+/*****************************************/
+
+@media (max-width: 1200px) {
+    .container {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+}
+
+/*****************************************/
+/*          Tablet Styles                */
+/*****************************************/
+
+@media (max-width: 1024px) {
+    h1 {
+        font-size: 40px;
+    }
+    .header p {
+        width: 90%;
+    }
+}
+
+/*****************************************/
+/*          Mobile Styles                */
+/*****************************************/
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 30px;
+    }
+
+    .slider-labels {
+        align-items: flex-start;
+    }
+    .slider-labels li {
+        font-size: 12px;
+    }
+
+    .slider-labels li span {
+        font-size: 22px;
+    }
+
+    .slider-labels li br {
+        display: none;
+    }
+
+    .slider-labels li img {
+        display: none;
+    }
+
+    .ctaBtn {
+        font-size: 20px;
+    }
+}
